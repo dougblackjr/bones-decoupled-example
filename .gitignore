@@ -1,0 +1,34 @@
+/vendor
+node_modules
+.idea
+
+/system/user/config/config.local.php
+/system/user/cache/*
+/system/user/cache/current_version
+
+logs/
+
+.env.local
+
+# For those using Apache for local
+/public/.htaccess
+
+#Mac Files
+**/.DS_Store
+
+!.gitkeep
+
+NOTES.md
+
+deploh.sh
+sync-prod.sh
+/public/uploads
+!/public/uploads/.gitkeep
+*.sql
+
+/public/static
+!/public/static/.gitkeep
+/system/user/addons/*
+!/system/user/addons/index.html
+/system/user/cache/*
+!/system/user/cache/index.html

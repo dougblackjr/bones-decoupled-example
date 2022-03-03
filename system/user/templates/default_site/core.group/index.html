@@ -31,15 +31,14 @@
                         <div class="py-6 px-2 text-center bg-gray-50">
                             <a class="font-bold font-heading" href="#">Category</a>
                             <ul class="hidden text-left mt-6">
-                                <li class="mb-4"><a href="#">New in</a></li>
-                                <li class="mb-4"><a href="#">Activewear</a></li>
-                                <li class="mb-4"><a href="#">Hoodies &amp; Sweatshirts</a></li>
-                                <li class="mb-4"><a href="#">Jackets</a></li>
-                                <li class="mb-4"><a href="#">Multipacks</a></li>
-                                <li class="mb-4"><a href="#">Bags</a></li>
-                                <li class="mb-4"><a href="#">Sports</a></li>
-                                <li class="mb-4"><a href="#">Gifts</a></li>
-                                <li><a href="#">Notes</a></li>
+                                {exp:channel:categories category_group="1"}
+                                    <li class="mb-4">
+                                        <a class="bones-category-click" href="#" data-category-id="{category_id}">
+                                            <img src="{category_image}" class="h-6 w-6">
+                                            {category_name}
+                                        </a>
+                                    </li>
+                                {/exp:channel:categories}
                             </ul>
                         </div>
                     </div>
@@ -140,15 +139,16 @@
                 <div class="mb-6 py-10 px-12 bg-gray-50">
                     <h3 class="mb-8 text-2xl font-bold font-heading">Category</h3>
                     <ul>
-                        <li class="mb-4"><a class="text-lg" href="#">New in</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Activewear</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Hoodies &amp; Sweatshirts</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Jackets</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Multipacks</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Bags</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Sports</a></li>
-                        <li class="mb-4"><a class="text-lg" href="#">Gifts</a></li>
-                        <li><a class="text-lg" href="#">Notes</a></li>
+                        {exp:channel:categories category_group="1"}
+                            <li class="mb-4">
+                                <a class="flex flex-rowbones-category-click" href="#" data-category-id="{category_id}">
+                                    <img src="{category_image}" class="h-6 w-6 mr-4">
+                                    <p>
+                                        {category_name}
+                                    </p>
+                                </a>
+                            </li>
+                        {/exp:channel:categories}
                     </ul>
                 </div>
                 <div class="mb-6 py-10 px-12 bg-gray-50">

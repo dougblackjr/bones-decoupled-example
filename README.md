@@ -15,3 +15,9 @@ Import from the `database` folder
 user: admin@bonesexample.com
 
 pass: mf5QadXuRMAFcf7CPTE28feBxwK2nFdw!
+
+# CREDITS
+
+Tailwind CSS template from shuffle.dev
+
+Preloader from https://dribbble.com/shots/2933302-Gif-preloader-for-shopping-cart

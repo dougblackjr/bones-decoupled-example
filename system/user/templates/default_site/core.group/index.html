@@ -4,8 +4,8 @@
         <div class="flex flex-wrap -mx-4 mb-20 items-center justify-between">
             <div class="w-full lg:w-auto px-4 mb-12 xl:mb-0">
                 <h2 class="text-5xl font-bold font-heading">
-                    <span>Found 125 results for</span>
-                    <a class="relative text-blue-300 underline" href="#">Sports</a>
+                    <!-- Here is where we'll change our text -->
+                    <div>Showing <span id="product-heading-text">All</span> results</div>
                 </h2>
             </div>
             <div class="w-full lg:w-auto px-4 flex flex-wrap items-center">
@@ -33,7 +33,7 @@
                             <ul class="hidden text-left mt-6">
                                 {exp:channel:categories category_group="1"}
                                     <li class="mb-4">
-                                        <a class="bones-category-click" href="#" data-category-id="{category_id}">
+                                        <a class="bones-category-click" href="#" data-category-name="{category_name}" data-category-id="{category_id}">
                                             <img src="{category_image}" class="h-6 w-6">
                                             {category_name}
                                         </a>
@@ -141,7 +141,7 @@
                     <ul>
                         {exp:channel:categories category_group="1"}
                             <li class="mb-4">
-                                <a class="flex flex-row bones-category-click" href="#" data-category-id="{category_id}">
+                                <a class="flex flex-row bones-category-click" href="#" data-category-name="{category_name}" data-category-id="{category_id}">
                                     <img src="{category_image}" class="h-6 w-6 mr-4">
                                     <p>
                                         {category_name}
@@ -155,7 +155,7 @@
                     <h3 class="mb-8 text-2xl font-bold font-heading">Colors</h3>
                     <div class="flex flex-row flex-wrap">
                         {exp:channel:categories category_group="2" style="linear"}
-                            <button class="mr-4 mb-2 rounded-full border border-blue-300 p-1 bones-color-click" data-color-id="{category_id}">
+                            <button class="mr-4 mb-2 rounded-full border border-blue-300 p-1 bones-color-click" data-color-name="{category_name}" data-color-id="{category_id}">
                                 <div class="rounded-full {color_code} w-5 h-5"></div>
                             </button>
                         {/exp:channel:categories}
@@ -175,14 +175,14 @@
                     <h3 class="mb-8 text-2xl font-bold font-heading">Size</h3>
                     <div class="flex flex-wrap -mx-2 -mb-2">
                         {exp:channel:categories category_group="4" style="linear"}
-                            <button class="mb-2 mr-1 w-16 py-1 border hover:border-gray-400 rounded-md bones-size-click" data-size-id="{catgegory_id}">{category_name}</button>
+                            <button class="mb-2 mr-1 w-16 py-1 border hover:border-gray-400 rounded-md bones-size-click" data-size-name="{category_name}" data-size-id="{catgegory_id}">{category_name}</button>
                         {/exp:channel:categories}
                     </div>
                 </div>
                 <div class="mb-6 py-10 px-12 bg-gray-50">
                     <h3 class="mb-6 text-2xl font-bold font-heading">Shipping</h3>
                     {exp:channel:categories category_group="3" style="linear"}
-                        <label class="flex mb-3 items-center text-lg bones-shipping-click" data-shipping-id="{catgegory_id}">
+                        <label class="flex mb-3 items-center text-lg bones-shipping-click" data-shipping-name="{category_name}" data-shipping-id="{catgegory_id}">
                             <input type="checkbox">
                             <span class="ml-2">{category_name}</span>
                         </label>
@@ -190,8 +190,8 @@
                 </div>
             </div>
             <div class="w-full lg:w-3/4 px-3">
-                <div class="flex flex-wrap -mx-3">
-                    <!-- Product Cards go here -->
+                <div class="flex flex-wrap -mx-3" id="product-cards">
+                    <img src="https://cdn.dribbble.com/users/20130/screenshots/2933302/media/2f5c373fc385ed7214241c461e2ad267.gif" />
                 </div>
             </div>
         </div>

@@ -1,5 +1,10 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+$config['autosave_interval_seconds'] = '10';
+$config['enable_dock'] = 'y';
+$config['enable_frontedit'] = 'y';
+$config['automatic_frontedit_links'] = 'y';
+$config['enable_mfa'] = 'y';
 $config['site_license_key'] = '';
 // ExpressionEngine Config Items
 // Find more configs and overrides at
